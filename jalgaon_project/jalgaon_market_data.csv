@@ -1,0 +1,10 @@
+District,Market,Commodity,Variety,Arrival_Date,Min_Price,Max_Price,Modal_Price
+Jalgaon,Jalgaon,Banana,Banana,13/02/2024,1600,1700,1610
+Jalgaon,Yawal,Banana,Banana,06/02/2024,1600,1700,1650
+Jalgaon,Jalgaon,Cotton,Long Staple,12/02/2024,6470,6870,6650
+Jalgaon,Jalgaon,Cotton,Long Staple,12/02/2024,6900,7000,6950
+Jalgaon,Jalgaon,Brinjal,Brinjal,10/02/2024,1800,2200,2000
+Jalgaon,Jalgaon,Brinjal,Brinjal,12/02/2024,500,7000,3095
+Jalgaon,Amalner,Maize,Deshi Red,11/02/2024,1500,1655,1655
+Jalgaon,Pachora,Maize,Maize,12/02/2024,1300,1635,1499
+Jalgaon,Raver,Maize,Yellow,12/02/2024,1400,1400,1400

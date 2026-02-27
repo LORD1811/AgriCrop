@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+Result: {{title}} | PlantAI
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="container">
+  <div class="row mb-5 reveal">
+    <div class="col-12">
+      <h1 class="fw-800 mb-1">Diagnosis Report</h1>
+      <p class="text-secondary lead">AI-driven analysis successfully completed.</p>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <div class="card glass p-4 border-0">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="fw-700 mb-0">Original Sample</h5>
+        {% if 'Healthy' in title %}
+        <span class="badge bg-success rounded-pill px-3">Healthy Leaf</span>
+        {% else %}
+        <span class="badge bg-danger rounded-pill px-3">Pathogen Found</span>
+        {% endif %}
+      </div>
+      <div class="text-center">
+        <div class="position-relative d-inline-block">
+          <img src="{{user_image}}" class="img-fluid rounded-curved mb-3 shadow-lg"
+            style="max-height: 250px; object-fit: cover;">
+        </div>
+        <h5 class="text-success fw-800">{{title}}</h5>
+      </div>
+    </div>
+
+    <div class="card glass p-4 border-0 text-center">
+      <h5 class="fw-700 mb-4">Precision Index</h5>
+      <div class="confidence-meter mx-auto">
+        <svg viewBox="0 0 100 100">
+          <circle class="confidence-bg" cx="50" cy="50" r="45"></circle>
+          <circle class="confidence-fill" id="conf-fill" cx="50" cy="50" r="45" stroke-dasharray="0 283"></circle>
+        </svg>
+        <div class="confidence-text">{{ confidence }}%</div>
+      </div>
+      <p class="text-muted mt-3 small px-3">Statistical certainty level calculated by our neural network.</p>
+    </div>
+
+    <div class="card glass p-4 border-0">
+      <h5 class="fw-700 mb-3 text-success">
+        <i class="fas fa-biohazard me-2"></i>
+        {% if 'Healthy' in title %}
+        Health Summary
+        {% else %}
+        Disease Profile
+        {% endif %}
+      </h5>
+      <div class="text-secondary small" style="line-height: 1.6;">{{desc}}</div>
+    </div>
+
+    <div class="card glass p-4 border-0 col-span-2">
+      <h5 class="fw-700 mb-3 text-warning">
+        <i class="fas fa-hand-holding-medical me-2"></i>
+        Recommended Action Plan
+      </h5>
+      <div class="bg-dark bg-opacity-25 rounded-curved p-4 border border-white border-opacity-10">
+        <p class="mb-0 text-white opacity-75 small" style="line-height: 1.8;">{{prevent}}</p>
+      </div>
+    </div>
+
+    {% if pred != 4 %}
+    <div class="card glass p-4 border-0">
+      <h5 class="fw-700 mb-4 text-primary">
+        <i class="fas fa-flask-vial me-2"></i>Treatment Sync
+      </h5>
+      <div class="text-center">
+        {% if simage.startswith('assets') %}
+        <img src="{{ url_for('static', filename=simage) }}" class="img-fluid rounded-curved mb-3 shadow"
+          style="max-height: 150px;">
+        {% else %}
+        <img src="{{simage}}" class="img-fluid rounded-curved mb-3 shadow" style="max-height: 150px;">
+        {% endif %}
+        <h6 class="fw-700 mb-3">{{sname}}</h6>
+        <a href="{{buy_link}}" target="_blank" class="btn btn-upload w-100 py-2">
+          Source Supplement <i class="fas fa-external-link-alt ms-2"></i>
+        </a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="/index" class="btn btn-outline-success px-5 py-3 rounded-20 fw-600">
+      <i class="fas fa-camera rotate-icon me-2"></i> New Analysis
+    </a>
+  </div>
+</div>
+
+<style>
+  .rounded-curved {
+    border-radius: 20px;
+  }
+
+  .rotate-icon {
+    transition: transform 0.5s;
+  }
+
+  .btn:hover .rotate-icon {
+    transform: rotate(180deg);
+  }
+</style>
+
+<script>
+  function updateConfidence() {
+    const fill = document.getElementById('conf-fill');
+    if (fill) {
+      const confidence = Number('{{ confidence }}');
+      const offset = (confidence / 100) * 283;
+      fill.style.strokeDasharray = offset + ' 283';
+    }
+  }
+  window.addEventListener('load', updateConfidence);
+  window.addEventListener('scroll', updateConfidence);
+  setTimeout(updateConfidence, 500);
+</script>
+{% endblock body %}

@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+Connect With Us | PlantAI
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+            <div class="card glass p-5 border-0 reveal overflow-hidden">
+                <div class="text-center mb-5">
+                    <div class="d-inline-flex align-items-center justify-content-center p-4 glass ">
+                        <img src="{{ url_for('static', filename='assets/favicon.png') }}" alt="PlantAI Logo"
+                            class="img-fluid mb-3" style="max-width: 150px;">
+                    </div>
+                    <h1 class="display-5 fw-800 text-primary mb-3">Connect with Experts</h1>
+                    <p class="lead text-secondary mx-auto" style="max-width: 500px;">Have questions about crop health?
+                        Our Jalgoan-based specialists are ready to assist you.</p>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-6">
+                        <a href="mailto:krushnabadgujar613@gmail.com"
+                            class="card glass p-4 text-decoration-none border-0 hover-lift h-100">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box me-3 p-3 rounded-12"
+                                    style="background:rgba(99,102,241,0.15); color:#818cf8;">
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1 fw-700 text-white">Email Us</h5>
+                                    <p class="text-muted mb-0 small">Direct consultation for complex diagnosis</p>
+                                    <span
+                                        class="text-primary mt-2 d-block small fw-600">krushnabadgujar613@gmail.com</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <a href="https://www.instagram.com/krixhn.09/" target="_blank"
+                            class="card glass p-4 text-decoration-none border-0 hover-lift h-100">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box me-3 p-3 rounded-12"
+                                    style="background:rgba(249,115,22,0.15); color:#e63131;">
+                                    <i class="fab fa-instagram fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1 fw-700 text-white">Instagram</h5>
+                                    <p class="text-muted mb-0 small">Join our agricultural AI community</p>
+                                    <span class="text-danger mt-2 d-block small fw-600">@krixhn.09</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <a href="https://wa.me/919XXXXXXXXX" target="_blank"
+                            class="card glass p-4 text-decoration-none border-0 hover-lift h-100">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box me-3 rounded-12 p-3"
+                                    style="background:rgba(37,211,102,0.12); color:#25d366;">
+                                    <i class="fab fa-whatsapp fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1 fw-700 text-white">WhatsApp / Phone</h5>
+                                    <p class="text-muted mb-0 small">Reach us directly for urgent queries</p>
+                                    <span class="mt-2 d-block small fw-600" style="color:#25d366;">+91 9XXXXXXXXX</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <a href="https://github.com/LORD1811/" target="_blank"
+                            class="card glass p-4 text-decoration-none border-0 hover-lift h-100">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box me-3 p-3 rounded-12"
+                                    style="background:rgba(255,255,255,0.1); color:#e2e8f0;">
+                                    <i class="fab fa-github fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1 fw-700 text-white">GitHub</h5>
+                                    <p class="text-muted mb-0 small">View source code &amp; contribute</p>
+                                    <span
+                                        class="text-white mt-2 d-block small fw-600 opacity-75">github.com/LORD1811/</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <a href="https://www.linkedin.com/in/krushna-badgujar-40534530b/" target="_blank"
+                            class="card glass p-4 text-decoration-none border-0 hover-lift">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-box me-4 p-3 rounded-12"
+                                    style="background:rgba(14,165,233,0.15); color:#38bdf8;">
+                                    <i class="fab fa-linkedin fa-lg"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h5 class="mb-1 fw-700 text-white">LinkedIn — Professional Network</h5>
+                                            <p class="text-muted mb-0 small">Connect for partnerships, collaborations
+                                                &amp; agri-tech discussions</p>
+                                            <span
+                                                class="text-info mt-1 d-block small fw-600">linkedin.com/in/krushna-badgujar-40534530b</span>
+                                        </div>
+                                        <i class="fas fa-arrow-right text-muted ms-3"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .rounded-32 {
+        border-radius: 32px;
+    }
+
+    .rounded-20 {
+        border-radius: 20px;
+    }
+
+    .hover-lift {
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .hover-lift:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid var(--primary-color) !important;
+    }
+</style>
+{% endblock body %}

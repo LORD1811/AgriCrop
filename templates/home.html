@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+{% block pagetitle %}PlantAI - Advanced Disease Intelligence{% endblock pagetitle %}
+{% block body %}
+
+<!-- Hero Section -->
+<section class="hero-gradient overflow-hidden">
+  <div class="leaf-drift" style="top: 10%; left: 10%;"></div>
+  <div class="leaf-drift" style="top: 30%; left: 80%; animation-delay: -5s;"></div>
+  <div class="leaf-drift" style="top: 70%; left: 40%; animation-delay: -10s;"></div>
+
+  <div class="container">
+    <div class="row align-items-center min-vh-75">
+      <div class="col-lg-7 text-start reveal">
+        <span class="badge bg-success-soft text-success px-3 py-2 rounded-pill mb-4 border border-success">
+          <i class="fas fa-microchip me-2"></i>Powered by CNN Deep Learning
+        </span>
+        <h1 class="display-2 fw-800 mb-4 lh-sm">
+          Diagnose Plant Diseases Instantly <span class="brand-text"><br> AI Precision</span>
+        </h1>
+
+        <div class="weather-widget mb-5 reveal" style="max-width: 400px; padding: 25px;">
+          <div class="d-flex align-items-center">
+            <div class="icon-orb me-4 p-3" style="width: 70px; height: 70px; border-radius: 20px;">
+              <i class="fas fa-cloud-sun text-white" id="weather-icon-main"></i>
+            </div>
+            <div>
+              <div class="weather-temp text-primary" id="live-temp">--°C</div>
+              <div class="fw-800 text-dark" id="live-location">Loading Weather...</div>
+              <div class="small text-secondary fw-600" id="live-condition">Fetching Jalgaon data</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="lead text-secondary mb-5 fs-4">
+          Detect plant diseases instantly. Our advanced neural network provides 91.25% accuracy to ensure your
+          harvest stays healthy.Trained on selected Maharashtra ( Jalgoan 🌾) crops for higher prediction reliability.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="/index" class="btn btn-premium px-5 shadow-lg">
+            <i class="fas fa-bolt me-2"></i>Launch AI Engine
+          </a>
+          <a href="/market" class="btn btn-outline-secondary px-5 rounded-pill border-2 fw-700">
+            Browse Market
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-block reveal">
+        <div class="position-relative">
+          <div class="glass p-4 rounded-32 shadow-2xl rotate-3 overflow-hidden">
+            <div class="scan-overlay"></div>
+            <img src="{{ url_for('static', filename='assets/ui/hero_scan.png') }}"
+              class="img-fluid rounded-24 shadow-lg animate-float" alt="AI Scan">
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <div class="scan-target">
+                <i class="fas fa-expand text-success fa-7x opacity-25"></i>
+              </div>
+            </div>
+            <div class="position-absolute bottom-0 start-50 translate-middle-x mb-5">
+              <span class="badge bg-success-soft text-success px-4 py-2 rounded-pill shadow-lg border border-success">
+                <i class="fas fa-sync-alt fa-spin me-2"></i>AI Scanning...
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats/Features -->
+<section class="py-10">
+  <div class="container">
+    <div class="row g-4 reveal stagger-container">
+      <div class="col-md-4">
+        <div class="feature-card glass h-100">
+          <div class="icon-box">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3 class="fw-700 mb-3">Instant Scan</h3>
+          <p class="text-secondary">Get diagnostic results in under 2 seconds. Optimized for field use.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card glass h-100">
+          <div class="icon-box">
+            <i class="fas fa-shield-heart"></i>
+          </div>
+          <h3 class="fw-700 mb-3">91.25% Accuracy</h3>
+          <p class="text-secondary">Trained on 61,000+ leaf images for state-of-the-art precision.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card glass h-100">
+          <div class="icon-box">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <h3 class="fw-700 mb-3">Cure Insight</h3>
+          <p class="text-secondary">Comprehensive chemical and organic prevention steps for every disease.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Supported Varieties -->
+<section class="py-10 bg-surface">
+  <div class="container">
+    <div class="text-center mb-10 reveal">
+      <h2 class="display-4 fw-800 mb-3">Signature Crops: Jalgaon</h2>
+      <p class="lead text-secondary">Our AI is optimized for the major architectural crops of Jalgaon, Maharashtra</p>
+    </div>
+
+    <div class="row row-cols-2 row-cols-md-4 g-4 reveal">
+      {% set crops = [
+      ('Banana', 'assets/crops/banana.png'),
+      ('Cotton', 'assets/crops/cotton.png'),
+      ('Maize', 'assets/crops/maize.png'),
+      ('Brinjal', 'assets/crops/brinjal.png')
+      ] %}
+      {% for name, img in crops %}
+      <div class="col">
+        <div class="plant-card shadow-lg glass h-100">
+          <img src="{{ url_for('static', filename=img) }}" alt="{{ name }}" class="img-fluid rounded-24">
+          <div class="plant-overlay p-3 text-center">
+            <h6 class="fw-700 mb-0">{{ name }}</h6>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center mt-10 reveal">
+      <a href="/index" class="btn btn-premium px-5">
+        Scan Your Plants Now <i class="fas fa-chevron-right ms-2"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Model Performance -->
+<section class="py-10">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0 reveal">
+        <h2 class="display-4 fw-800 mb-4">Model Intelligence</h2>
+        <p class="lead text-secondary mb-4">
+          Our AI model is rigorously tested to ensure the highest reliability in the field. Below is the confusion
+          matrix showing how our CNN handles various plant species and diseases.
+        </p>
+
+        <!-- Live Field Insights (Weather/Environment) -->
+        <div class="weather-widget mb-4 reveal">
+          <i class="fas fa-temperature-high weather-icon"></i>
+          <div>
+            <h6 class="fw-800 mb-1">Jalgaon Field Conditions</h6>
+            <p class="small text-muted mb-0">High humidity detected (78%). Ideal conditions for fungal growth. Monitor
+              Cotton crops closely.</p>
+          </div>
+        </div>
+
+        <div class="card glass p-4 mb-4 border-start border-4 border-success">
+          <h5 class="fw-700 text-success mb-2">91.25% Regional Accuracy</h5>
+          <p class="small text-muted mb-0">Achieved on the Jalgaon validation dataset (400+ images).</p>
+        </div>
+        <div class="card glass p-4 border-start border-4 border-primary">
+          <h5 class="fw-700 text-primary mb-2">Transfer Learning Opt.</h5>
+          <p class="small text-muted mb-0">Fine-tuned using ResNet18 for signature architectural crops.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal">
+        <div class="card glass p-2 overflow-hidden shadow-2xl rounded-24">
+          <img src="{{ url_for('static', filename='confusion_matrix.png') }}" class="img-fluid rounded-24"
+            alt="Confusion Matrix">
+          <div class="p-3 text-center">
+            <span class="small text-secondary"><i class="fas fa-search me-1"></i> Confusion Matrix (Current Test
+              Set)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .rounded-32 {
+    border-radius: 32px;
+  }
+
+  .rounded-24 {
+    border-radius: 24px;
+  }
+
+  .shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .py-10 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .mb-10 {
+    margin-bottom: 5rem;
+  }
+
+  .mt-10 {
+    margin-top: 5rem;
+  }
+
+  .rotate-3 {
+    transform: rotate(3deg);
+  }
+
+  .bg-success-soft {
+    background-color: rgba(16, 185, 129, 0.1);
+  }
+
+  .min-vh-75 {
+    min-height: 75vh;
+  }
+
+  .bg-surface {
+    background-color: var(--bg-color);
+  }
+</style>
+
+<script>
+  async function fetchWeather() {
+    try {
+      const lat = 21.0077;
+      const lon = 75.5626;
+      const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
+      const data = await response.json();
+
+      if (data.current_weather) {
+        const temp = Math.round(data.current_weather.temperature);
+        const code = data.current_weather.weathercode;
+
+        document.getElementById('live-temp').textContent = `${temp}°C`;
+        document.getElementById('live-location').textContent = `Jalgaon, MH`;
+
+        const conditionEl = document.getElementById('live-condition');
+        const iconEl = document.getElementById('weather-icon-main');
+
+        if (code === 0) {
+          conditionEl.textContent = "Clear Sky";
+          iconEl.className = "fas fa-sun text-white";
+        } else if (code <= 3) {
+          conditionEl.textContent = "Partly Cloudy";
+          iconEl.className = "fas fa-cloud-sun text-white";
+        } else if (code <= 48) {
+          conditionEl.textContent = "Foggy Conditions";
+          iconEl.className = "fas fa-smog text-white";
+        } else {
+          conditionEl.textContent = "Rainy/Overcast";
+          iconEl.className = "fas fa-cloud-showers-heavy text-white";
+        }
+      }
+    } catch (error) {
+      console.error("Weather fetch failed:", error);
+      document.getElementById('live-temp').textContent = "32°C";
+      document.getElementById('live-location').textContent = "Jalgaon, MH";
+      document.getElementById('live-condition').textContent = "Data Sync Offline";
+    }
+  }
+
+  window.addEventListener('load', fetchWeather);
+</script>
+
+{% endblock body %}

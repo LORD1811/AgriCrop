@@ -1,0 +1,150 @@
+Skip to content
+Navigation Menu
+[0] (40,41)<a aria-label='Homepage' class='mr-lg-3 color-fg-inherit flex-order-2 js-prevent-focus-on-mobile-nav' href='/' />
+[1] (107,41)<button class='NavDropdown-module__button__PEHWX js-details-target'>Platform />
+[2] (191,41)<button class='NavDropdown-module__button__PEHWX js-details-target'>Solutions />
+[3] (280,41)<button class='NavDropdown-module__button__PEHWX js-details-target'>Resources />
+[4] (382,41)<button class='NavDropdown-module__button__PEHWX js-details-target'>Open Source />
+[5] (482,41)<button class='NavDropdown-module__button__PEHWX js-details-target'>Enterprise />
+[6] (555,41)<a class='NavLink-module__link__EG3d4 MarketingNavigation-module__navLink__hUomM' href='https://github.com/pricing' />
+	[7] (555,41)<span >Pricing />
+[8] (785,41)<button aria-label='Search or jump to…' class='header-search-button placeholder input-button form-control d-flex flex-1 flex-self-stretch flex-items-center no-wrap width-full py-0 pl-2 pr-0 text-left border-0 box-shadow-none' placeholder='Search or jump to...' />
+	[9] (785,41)<div  />
+[10] (836,41)<a class='HeaderMenu-link HeaderMenu-link--sign-in HeaderMenu-button flex-shrink-0 no-underline d-none d-lg-inline-flex border border-lg-0 rounded px-2 py-1' href='/login?return_to=https%3A%2F%2Fgithub.com%2FspMohanty%2FPlantVillage-Dataset'>Sign in />
+[11] (906,41)<a class='HeaderMenu-link HeaderMenu-link--sign-up HeaderMenu-button flex-shrink-0 d-flex d-lg-inline-flex no-underline border color-border-default rounded px-2 py-1' href='/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=spMohanty%2FPlantVillage-Dataset'>Sign up />
+[12] (960,41)<button class='Button Button--iconOnly Button--invisible Button--medium AppHeader-button HeaderMenu-link border' id='icon-button-c9bd3b1f-b3b9-4fb4-822f-0da91b05fb1a' />
+[13] (88,117)<a class='url fn' href='/spMohanty'>spMohanty />
+/
+[14] (219,117)<a href='/spMohanty/PlantVillage-Dataset'>PlantVillage-Dataset />
+Public
+[15] (713,116)<a aria-label='You must be signed in to change notification settings' class='btn-sm btn' href='/login?return_to=%2FspMohanty%2FPlantVillage-Dataset' id='repository-details-watch-button'>Notifications />
+[16] (820,116)<a class='btn-sm btn' href='/login?return_to=%2FspMohanty%2FPlantVillage-Dataset' id='fork-button'>Fork />
+	[17] (842,116)<span >729 />
+[18] (924,116)<a aria-label='You must be signed in to star a repository' class='tooltipped tooltipped-sw btn-sm btn' href='/login?return_to=%2FspMohanty%2FPlantVillage-Dataset' />
+	[19] (919,116)<span >Star />
+	[20] (948,116)<span >816 />
+[21] (58,180)<a class='UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item selected' href='/spMohanty/PlantVillage-Dataset' id='code-tab' />
+	[22] (68,180)<span >Code />
+[23] (146,180)<a class='UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item' href='/spMohanty/PlantVillage-Dataset/issues' id='issues-tab' />
+	[24] (141,180)<span >Issues />
+	[25] (177,180)<span >13 />
+[26] (255,180)<a class='UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item' href='/spMohanty/PlantVillage-Dataset/pulls' id='pull-requests-tab' />
+	[27] (265,180)<span >Pull requests />
+[28] (353,180)<a class='UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item' href='/spMohanty/PlantVillage-Dataset/actions' id='actions-tab' />
+	[29] (363,180)<span >Actions />
+[30] (437,180)<a class='UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item' href='/spMohanty/PlantVillage-Dataset/projects' id='projects-tab' />
+	[31] (447,180)<span >Projects />
+[32] (524,180)<a class='UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item' href='/spMohanty/PlantVillage-Dataset/security' id='security-tab' />
+	[33] (534,180)<span >Security />
+[34] (610,180)<a class='UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item' href='/spMohanty/PlantVillage-Dataset/pulse' id='insights-tab' />
+	[35] (620,180)<span >Insights />
+spMohanty/PlantVillage-Dataset
+[36] (76,253)<button aria-label='master branch' class='prc-Button-ButtonBase-9n-Xk overview-ref-selector width-full RefSelectorAnchoredOverlay-module__RefSelectorOverlayBtn__a3WK3' id='ref-picker-repos-header-ref-selector' />
+	[37] (76,253)<span  />
+		[38] (66,253)<span  />
+			[39] (66,253)<div  />
+				[40] (44,253)<div  />
+				[41] (75,253)<div  />
+					[42] (75,253)<span >master />
+[43] (171,253)<a class='prc-Button-ButtonBase-9n-Xk OverviewContent-module__Button___Uotu' href='/spMohanty/PlantVillage-Dataset/branches' />
+	[44] (171,253)<span  />
+		[45] (181,253)<span  />
+			[46] (181,253)<span >Branch />
+				[47] (161,253)<strong >1 />
+[48] (241,253)<a class='prc-Button-ButtonBase-9n-Xk OverviewContent-module__Button___Uotu' href='/spMohanty/PlantVillage-Dataset/tags' />
+	[49] (241,253)<span  />
+		[50] (251,253)<span  />
+			[51] (251,253)<span >Tags />
+				[52] (238,253)<strong >0 />
+[53] (523,253)<span  />
+	[54] (452,253)<span  />
+	[55] (530,253)<input aria-label='Go to file' class='prc-components-Input-IwWrt' placeholder='Go to file' role='combobox' />
+[56] (661,253)<button class='prc-Button-ButtonBase-9n-Xk' id='_R_75ab_' />
+	[57] (661,253)<span  />
+		[58] (661,253)<span >Code />
+Folders and files
+Latest commit
+[59] (50,320)<a class='Link__StyledLink-sc-1syctfj-0 prc-Link-Link-9ZwDx' href='/spMohanty' />
+	[60] (47,321)<img  />
+[61] (93,320)<a aria-label='commits by spMohanty' class='Link__StyledLink-sc-1syctfj-0 iIGVMW AuthorAvatar-module__authorHoverableLink__MHTT8 prc-Link-Link-9ZwDx' href='/spMohanty/PlantVillage-Dataset/commits?author=spMohanty'>spMohanty />
+[62] (188,320)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/7f7ecc7e1eaca78107e3affe7cb5abd9427e139a'>Format citation block />
+[63] (530,320)<a aria-label='Commit 7f7ecc7' class='Link--secondary prc-Link-Link-9ZwDx' href='/spMohanty/PlantVillage-Dataset/commit/7f7ecc7e1eaca78107e3affe7cb5abd9427e139a'>7f7ecc7 />
+·
+History
+[64] (652,320)<a class='prc-Button-ButtonBase-9n-Xk d-none d-lg-flex LinkButton-module__linkButton__nFnov flex-items-center fgColor-default' href='/spMohanty/PlantVillage-Dataset/commits/master/' />
+	[65] (652,320)<span  />
+		[66] (660,320)<span  />
+			[67] (660,320)<span >15 Commits />
+[68] (367,373)<tr  />
+	[69] (134,374)<a aria-label='data_distribution_for_SVM, (Directory)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/tree/master/data_distribution_for_SVM' title='data_distribution_for_SVM'>data_distribution_for_SVM />
+	[70] (392,374)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/97664b03183427f3190489764e5f1c2929cd25ac' title='Rename svm data distribution'>Rename svm data distribution />
+[71] (367,420)<tr  />
+	[72] (120,420)<a aria-label='generated_for_paper, (Directory)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/tree/master/generated_for_paper' title='generated_for_paper'>generated_for_paper />
+	[73] (420,420)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/6bcc734f0c92092db049802ae4480512da7cd24b' title='Update README with plantvillage image'>Update README with plantvillage image />
+[74] (367,467)<tr  />
+	[75] (99,467)<a aria-label='leaf_grouping, (Directory)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/tree/master/leaf_grouping' title='leaf_grouping'>leaf_grouping />
+	[76] (346,467)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/40789680ba2e6382608dba47b397688fcbd0d04a' title='First Commit'>First Commit />
+[77] (367,514)<tr  />
+	[78] (74,514)<a aria-label='logs, (Directory)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/tree/master/logs' title='logs'>logs />
+	[79] (368,514)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/26ce98cab5f3f85e74fe6c8b43f94a5832f085ed' title='minor reorganization'>minor reorganization />
+[80] (367,560)<tr  />
+	[81] (72,561)<a aria-label='raw, (Directory)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/tree/master/raw' title='raw'>raw />
+	[82] (346,561)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/40789680ba2e6382608dba47b397688fcbd0d04a' title='First Commit'>First Commit />
+[83] (367,607)<tr  />
+	[84] (81,607)<a aria-label='scripts, (Directory)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/tree/master/scripts' title='scripts'>scripts />
+	[85] (366,607)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/afd4f8127f92129e1427d7a2b41d1423de772e65' title='Update HF repo link'>Update HF repo link />
+[86] (367,654)<tr  />
+	[87] (74,654)<a aria-label='utils, (Directory)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/tree/master/utils' title='utils'>utils />
+	[88] (346,654)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/40789680ba2e6382608dba47b397688fcbd0d04a' title='First Commit'>First Commit />
+[89] (367,701)<tr  />
+	[90] (88,701)<a aria-label='.gitignore, (File)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/blob/master/.gitignore' title='.gitignore'>.gitignore />
+	[91] (368,701)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/26ce98cab5f3f85e74fe6c8b43f94a5832f085ed' title='minor reorganization'>minor reorganization />
+[92] (367,747)<tr  />
+	[93] (97,748)<a aria-label='CITATION.cff, (File)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/blob/master/CITATION.cff' title='CITATION.cff'>CITATION.cff />
+	[94] (368,748)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/26ce98cab5f3f85e74fe6c8b43f94a5832f085ed' title='minor reorganization'>minor reorganization />
+[95] (367,794)<tr  />
+	[96] (96,794)<a aria-label='README.md, (File)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/blob/master/README.md' title='README.md'>README.md />
+	[97] (369,794)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/7f7ecc7e1eaca78107e3affe7cb5abd9427e139a' title='Format citation block'>Format citation block />
+[98] (367,841)<tr  />
+	[99] (107,841)<a aria-label='README_HF.md, (File)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/blob/master/README_HF.md' title='README_HF.md'>README_HF.md />
+	[100] (369,841)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/7f7ecc7e1eaca78107e3affe7cb5abd9427e139a' title='Format citation block'>Format citation block />
+[101] (367,888)<tr  />
+	[102] (136,888)<a aria-label='generate_data_for_SVM.py, (File)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/blob/master/generate_data_for_SVM.py' title='generate_data_for_SVM.py'>generate_data_for_SVM.py />
+	[103] (504,888)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/5b10f54e5953bae366907a505d58691d20abfd83' title='Adding data generation scripts and data for the baseline experiments using SVM'>Adding data generation scripts and data for the baseline experiments … />
+[104] (367,934)<tr  />
+	[105] (111,935)<a aria-label='generate_lmdb.sh, (File)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/blob/master/generate_lmdb.sh' title='generate_lmdb.sh'>generate_lmdb.sh />
+	[106] (346,935)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/40789680ba2e6382608dba47b397688fcbd0d04a' title='First Commit'>First Commit />
+[107] (367,981)<tr  />
+	[108] (125,981)<a aria-label='generate_mapstring.py, (File)' class='Link--primary' href='/spMohanty/PlantVillage-Dataset/blob/master/generate_mapstring.py' title='generate_mapstring.py'>generate_mapstring.py />
+	[109] (346,981)<a class='Link--secondary' href='/spMohanty/PlantVillage-Dataset/commit/40789680ba2e6382608dba47b397688fcbd0d04a' title='First Commit'>First Commit />
+About
+Dataset of diseased plant leaf images and corresponding labels
+Resources
+[110] (760,370)<a class='Link--muted' href='#readme-ov-file'>Readme />
+Citation
+[111] (794,403)<details class='dropdown details-reset details-overlay d-inline-block' />
+	[112] (794,403)<summary class='no-underline btn-link color-fg-muted' role='button'>Cite this repository />
+		[113] (858,405)<div  />
+[114] (758,436)<a class='Link Link--muted' href='/spMohanty/PlantVillage-Dataset/activity' />
+	[115] (770,436)<span >Activity />
+Stars
+[116] (764,469)<a class='Link Link--muted' href='/spMohanty/PlantVillage-Dataset/stargazers'>stars />
+	[117] (760,469)<strong >816 />
+Watchers
+[118] (772,502)<a class='Link Link--muted' href='/spMohanty/PlantVillage-Dataset/watchers'>watching />
+	[119] (757,502)<strong >36 />
+Forks
+[120] (764,535)<a class='Link Link--muted' href='/spMohanty/PlantVillage-Dataset/forks'>forks />
+	[121] (761,535)<strong >729 />
+[122] (774,568)<a class='Link--muted' href='/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2FspMohanty%2FPlantVillage-Dataset&report=spMohanty+%28user%29'>Report repository />
+[123] (755,632)<a class='Link--primary no-underline Link' href='/spMohanty/PlantVillage-Dataset/releases'>Releases />
+No releases published
+[124] (850,735)<a class='Link--primary no-underline Link d-flex flex-items-center' href='/users/spMohanty/packages?repo_name=PlantVillage-Dataset'>Packages />
+No packages published
+Languages
+[125] (771,900)<a class='d-inline-flex flex-items-center flex-nowrap Link--secondary no-underline text-small mr-3' href='/spMohanty/PlantVillage-Dataset/search?l=python' />
+	[126] (764,900)<span >Python />
+	[127] (800,900)<span >79.8% />
+[128] (870,900)<a class='d-inline-flex flex-items-center flex-nowrap Link--secondary no-underline text-small mr-3' href='/spMohanty/PlantVillage-Dataset/search?l=shell' />
+	[129] (863,900)<span >Shell />
+	[130] (894,900)<span >20.2% />

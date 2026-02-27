@@ -1,0 +1,267 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+AI Engine - PlantAI
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mb-5 reveal">
+            <div class="badge bg-primary bg-opacity-10 text-primary rounded-24 px-4 py-2 mb-3 fw-700">Next-Gen
+                Diagnosis</div>
+            <h1 class="display-3 fw-800 mb-3" style="color: var(--text-primary);">Plant <span
+                    class="text-success">Intelligence</span></h1>
+            <p class="lead" style="color: var(--text-secondary);">Upload a leaf photo or use your camera. Our neural
+                network diagnoses your crop's health with precision.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-7">
+            <div class="card glass p-2 mb-5 rounded-soft animate-float">
+                <form action="/submit" method="post" enctype="multipart/form-data" id="upload-form">
+                    <div class="upload-area text-center" id="drop-zone">
+                        <div class="pulse-ring"></div>
+                        <div id="upload-prompt">
+                            <div class="mb-4">
+                                <div class="icon-orb mx-auto mb-4">
+                                    <i class="fas fa-microscope text-white"></i>
+                                </div>
+                                <h3 class="fw-800" style="color: var(--text-primary);">Scan Your Plant</h3>
+                                <p class="small" style="color: var(--text-secondary);">Drag & drop, upload a file, or
+                                    capture with your camera</p>
+                            </div>
+                            <!-- Two action buttons: Upload + Camera -->
+                            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                                <button type="button"
+                                    class="btn btn-outline-success px-4 py-3 rounded-20 fw-700 border-2"
+                                    onclick="document.getElementById('file-input').click()">
+                                    <i class="fas fa-upload me-2"></i>Upload File
+                                </button>
+                                <button type="button" id="open-camera-btn"
+                                    class="btn btn-premium px-4 py-3 rounded-20 fw-700" onclick="openCamera()">
+                                    <i class="fas fa-camera me-2"></i>Use Camera
+                                </button>
+                            </div>
+                        </div>
+
+                        <input type="file" name="image" id="file-input" accept="image/*" class="d-none">
+
+                        <!-- Camera View -->
+                        <div id="camera-view" class="d-none w-100">
+                            <div class="position-relative mb-3">
+                                <video id="camera-stream" autoplay playsinline
+                                    class="img-fluid rounded-curved shadow-lg w-100"
+                                    style="max-height: 320px; object-fit: cover;"></video>
+                                <div class="scanning-line"></div>
+                            </div>
+                            <div class="d-flex gap-3 justify-content-center">
+                                <button type="button" class="btn btn-premium px-5 py-2 fw-700" onclick="capturePhoto()">
+                                    <i class="fas fa-circle me-2" style="color: #ff4444;"></i>Capture
+                                </button>
+                                <button type="button" class="btn btn-outline-danger px-4 py-2 fw-600"
+                                    onclick="closeCamera()">
+                                    <i class="fas fa-times me-2"></i>Cancel
+                                </button>
+                            </div>
+                            <canvas id="capture-canvas" class="d-none"></canvas>
+                        </div>
+
+                        <!-- Image Preview (after upload or capture) -->
+                        <div id="image-preview" class="mt-3 d-none">
+                            <div class="position-relative d-inline-block">
+                                <img src="" alt="Preview" class="img-fluid rounded-curved shadow-2xl"
+                                    style="max-height: 350px;">
+                                <div class="scanning-line"></div>
+                            </div>
+                            <p id="file-name" class="mt-3 fw-700 mb-0" style="color: var(--primary-color);"></p>
+                            <button type="button"
+                                class="btn btn-sm btn-link text-danger text-decoration-none mt-2 fw-600"
+                                onclick="resetUpload()">
+                                <i class="fas fa-redo me-1"></i>Change
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-3">
+                        <button type="submit"
+                            class="btn btn-upload w-100 py-4 shadow-lg text-uppercase letter-spacing-1" id="analyze-btn"
+                            disabled>
+                            <i class="fas fa-bolt me-2"></i> Start Diagnosis
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row g-4 reveal stagger-container mt-2">
+                <div class="col-md-4">
+                    <div class="feature-card glass h-100 p-4 text-center">
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <h6 class="fw-800 mb-2">91% Accuracy</h6>
+                        <p class="small text-muted mb-0">Tested on Jalgaon regional crops</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card glass h-100 p-4 text-center">
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h6 class="fw-800 mb-2">Expert Cures</h6>
+                        <p class="small text-muted mb-0">Organic & precision remedies</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card glass h-100 p-4 text-center">
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-shop"></i>
+                        </div>
+                        <h6 class="fw-800 mb-2">Local Sync</h6>
+                        <p class="small text-muted mb-0">Jalgaon regional market data</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .rounded-curved {
+        border-radius: 30px;
+    }
+
+    .scanning-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--primary-color);
+        box-shadow: 0 0 15px var(--primary-color);
+        animation: scan 2s infinite ease-in-out;
+        display: none;
+    }
+
+    @keyframes scan {
+        0% {
+            top: 0;
+        }
+
+        100% {
+            top: 100%;
+        }
+    }
+
+    #upload-form.processing .scanning-line {
+        display: block;
+    }
+
+    #camera-stream {
+        border: 2px solid var(--primary-color);
+        box-shadow: 0 0 20px rgba(0, 217, 126, 0.3);
+    }
+</style>
+
+<script>
+    const fileInput = document.getElementById('file-input');
+    const dropZone = document.getElementById('drop-zone');
+    const imagePreview = document.getElementById('image-preview');
+    const previewImg = imagePreview.querySelector('img');
+    const fileName = document.getElementById('file-name');
+    const analyzeBtn = document.getElementById('analyze-btn');
+    const uploadPrompt = document.getElementById('upload-prompt');
+    const cameraView = document.getElementById('camera-view');
+    const form = document.getElementById('upload-form');
+    let mediaStream = null;
+
+    // ── File Upload ──────────────────────────────────────────────────────────
+    fileInput.addEventListener('change', function () {
+        if (this.files && this.files[0]) showPreview(this.files[0]);
+    });
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(n => {
+        dropZone.addEventListener(n, e => { e.preventDefault(); e.stopPropagation(); });
+    });
+    ['dragenter', 'dragover'].forEach(n => dropZone.addEventListener(n, () => dropZone.classList.add('dragover')));
+    ['dragleave', 'drop'].forEach(n => dropZone.addEventListener(n, () => dropZone.classList.remove('dragover')));
+
+    dropZone.addEventListener('drop', e => {
+        const files = e.dataTransfer.files;
+        if (files.length) { fileInput.files = files; showPreview(files[0]); }
+    });
+
+    function showPreview(file) {
+        if (!file.type.startsWith('image/')) return;
+        const reader = new FileReader();
+        reader.onload = e => {
+            previewImg.src = e.target.result;
+            fileName.textContent = file.name;
+            imagePreview.classList.remove('d-none');
+            uploadPrompt.classList.add('d-none');
+            cameraView.classList.add('d-none');
+            analyzeBtn.disabled = false;
+        };
+        reader.readAsDataURL(file);
+    }
+
+    function resetUpload() {
+        fileInput.value = '';
+        imagePreview.classList.add('d-none');
+        uploadPrompt.classList.remove('d-none');
+        analyzeBtn.disabled = true;
+        closeCamera();
+    }
+
+    form.addEventListener('submit', () => {
+        analyzeBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Analyzing...';
+        form.classList.add('processing');
+    });
+
+    // ── Camera Capture ───────────────────────────────────────────────────────
+    async function openCamera() {
+        try {
+            mediaStream = await navigator.mediaDevices.getUserMedia({
+                video: { facingMode: 'environment', width: { ideal: 1280 }, height: { ideal: 720 } }
+            });
+            const video = document.getElementById('camera-stream');
+            video.srcObject = mediaStream;
+            uploadPrompt.classList.add('d-none');
+            cameraView.classList.remove('d-none');
+            imagePreview.classList.add('d-none');
+        } catch (err) {
+            alert('Camera access denied. Please allow camera permissions or upload a file instead.\n\n' + err.message);
+        }
+    }
+
+    function capturePhoto() {
+        const video = document.getElementById('camera-stream');
+        const canvas = document.getElementById('capture-canvas');
+        canvas.width = video.videoWidth || 640;
+        canvas.height = video.videoHeight || 480;
+        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        canvas.toBlob(blob => {
+            const capturedFile = new File([blob], 'camera_capture.jpg', { type: 'image/jpeg' });
+            // Inject into hidden file input
+            const dt = new DataTransfer();
+            dt.items.add(capturedFile);
+            fileInput.files = dt.files;
+            closeCamera();
+            showPreview(capturedFile);
+        }, 'image/jpeg', 0.92);
+    }
+
+    function closeCamera() {
+        if (mediaStream) {
+            mediaStream.getTracks().forEach(t => t.stop());
+            mediaStream = null;
+        }
+        cameraView.classList.add('d-none');
+        if (!imagePreview.classList.contains('d-none') === false) {
+            uploadPrompt.classList.remove('d-none');
+        }
+    }
+</script>
+{% endblock body %}
