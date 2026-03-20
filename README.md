@@ -198,10 +198,22 @@ http://127.0.0.1:5000
 
 Example:
 
-```
-![Home Page](demo_images/home.png)
-![Prediction Result](demo_images/result.png)
-```
+## 📸 Project Screenshots
+
+### 🏠 Home Page
+<img src="demo_images/home.png" width="700">
+
+### 🤖 AI Engine
+<img src="demo_images/Ai-engine.png" width="700">
+
+### ✅ Result Page
+<img src="demo_images/result.png" width="700">
+
+### 📞 Contact Us
+<img src="demo_images/contact-us.png" width="700">
+
+### 📊 Prediction History
+<img src="demo_images/history-predicaton.png" width="700">
 
 ---
 
